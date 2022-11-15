@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+#Explore {
+  background-image: url(http://www.holidaybug.co.za/wp-content/uploads/2015/11/travel-the-world-1.jpg);
+}
+#forest {
+  background-image: url(https://wallup.net/wp-content/uploads/2019/05/10/613023-landscape-nature-beautiful-forest-area-wild-sky-landscapes.jpg);
+}
+#sunny {
+  background-image: url(https://wallpapercave.com/wp/InRvDcw.jpg);
+}
+
+#cityWinter {
+  background-image: url(https://cdn.wallpapersafari.com/42/12/7IS4Rv.jpg);
+}
+#mountains {
+  background-image: url(https://free4kwallpapers.com/uploads/originals/2020/11/16/mountain-cloud-peak-wallpaper.jpg);
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+}
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  border-radius: 50px;
+  margin: 5px;
+  color: #fff;
+  position: relative;
+  flex: 0.5;
+  transition: flex 0.7s ease-in;
+}
+.panel h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 24px;
+  margin: 0;
+  opacity: 0;
+}
+.panel.active {
+  flex: 5;
+}
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
