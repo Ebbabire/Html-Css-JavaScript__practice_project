@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  background-color: #333;
+}
+
+.container {
+  background-color: white;
+  transform-origin: top left;
+  transition:transform 0.4s ease-in;
+  padding: 50px;
+
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+ 
+}
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+  -webkit-transform: rotate(-70deg);
+  -moz-transform: rotate(-70deg);
+  -ms-transform: rotate(-70deg);
+  -o-transform: rotate(-70deg);
+}
+
+.circle-container {
+  position: fixed;
+  top:-100px;
+  left:-100px;
+}
+.circle {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+  border-radius:50%;
+  position: relative;
+}
+
+.circle button {
+  position: absolute;
+  top:50%;
+  left:50%;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 24px;
+  height: 100px;
+}
+
+.circle button#open {
+  left:60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transition: transform 0.4s ease-in;
+  -webkit-transition: transform 0.4s ease-in;
+  -moz-transition: transform 0.4s ease-in;
+  -ms-transition: transform 0.4s ease-in;
+  -o-transition: transform 0.4s ease-in;
+}
+.content img{
+  max-width: 100%;
+}
+.content {
+  width: 100%;
+  padding: 50px;
+}
+
+nav {
+  color: white;
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100; 
+}
+
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  margin: 10px auto;
+  font-size: 20px;
+}
+nav ul li i {
+  margin-right: 10px;
+}
