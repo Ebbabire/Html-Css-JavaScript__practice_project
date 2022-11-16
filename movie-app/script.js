@@ -18,7 +18,7 @@ async function getMovies(url) {
   showMovies(data.results);
 }
 
-function showMovies(movies) {
+const showMovies = (movies) => {
   main.innerHTML = '';
 
   movies.forEach((movie) => {
@@ -42,7 +42,7 @@ function showMovies(movies) {
   });
 }
 
-function getClassByRate(vote) {
+cosnt getClassByRate = (vote) => {
   if (vote >= 8) {
     return 'green';
   } else if (vote >= 5) {
