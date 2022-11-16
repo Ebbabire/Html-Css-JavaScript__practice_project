@@ -21,8 +21,7 @@ prev.addEventListener('click', () => {
     }
     update();
 });
-
-function update() {
+cosnt update = () => {
     if (currentActive < 2) {
         prev.disabled = true;
     } else if (currentActive > 3) {
